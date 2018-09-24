@@ -1,0 +1,17 @@
+@import './App.css';
+
+.footer-links span{
+  padding: 0px 15px;
+  font-size: 15px;
+}
+
+.footer-links i {
+  color: var(--brown);
+  transition: 0.5s;
+  padding: 10px;
+}
+
+.footer-links i:hover {
+  color: var(--blue);
+  transition: 0.5s;
+}
