@@ -10,10 +10,10 @@ class Footer extends Component {
     return (
       <footer className='footer'>
         <div className='row align-items-center text-center'>
-          <div className='col-sm-3 col'>
+          <div className='col-xm-6 col'>
             <BrandName />
           </div>
-          <div className='col-sm-6 col footer-links'>
+          <div className='col-md-6 footer-links'>
             <span>
               <Link to={'/'} target='_blank'>
                 <i className='fab fa-facebook-f fa-2x'></i>
@@ -35,8 +35,8 @@ class Footer extends Component {
               </Link>
             </span>
           </div>
-          <div className='col-sm-3 col'>
-            <p className='mb-0'>Copyright &copy; {new Date().getFullYear()} DevConnector</p>
+          <div className='col-xm-6 col'>
+            <p className='mb-0 pt-3 pb-3'>Copyright &copy; {new Date().getFullYear()} DevConnector</p>
           </div>
         </div>
       </footer>
