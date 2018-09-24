@@ -1,7 +1,4 @@
-:root {
-  --brown: rgb(154, 51, 52);
-  --blue: rgb(27, 209, 255);
-}
+@import './App.css';
 
 .brand-name {
   font-size: 35px;
@@ -18,4 +15,8 @@
   padding: 0px 2px;
   color: var(--blue);
   font-size: 45px;
+}
+
+.brand-name :hover {
+  cursor: default;
 }
