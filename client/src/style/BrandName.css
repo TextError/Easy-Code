@@ -1,0 +1,21 @@
+:root {
+  --brown: rgb(154, 51, 52);
+  --blue: rgb(27, 209, 255);
+}
+
+.brand-name {
+  font-size: 35px;
+  font-family: 'Fjalla One','Lato','Roboto','Oswald', sans-serif;
+}
+
+.brand-name p {
+  margin: 0px;
+  color: var(--brown);
+}
+
+.brand-name span {
+  margin-bottom: 0px;
+  padding: 0px 2px;
+  color: var(--blue);
+  font-size: 45px;
+}
