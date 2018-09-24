@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './style/App.css';
 
-class App extends Component {
+class Footer extends Component {
   render() {
     return (
       <div>
+        footer
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default Footer;
