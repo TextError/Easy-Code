@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className='App'>
+        <div className='container-fluid'>
           <Navbar />
           <Route exact path='/' component={Landing} />
           <Footer />

@@ -1,4 +1,12 @@
 :root {
   --brown: rgb(154, 51, 52);
-  --blue: rgb(0, 209, 255);
+  --blue: rgb(27, 209, 255);
+  --blueLight: rgb(160, 255, 255);
+}
+
+.container-fluid{
+  padding: 0px !important;
+  overflow: hidden;
+  font-family: initial;
+  color: #272727;
 }

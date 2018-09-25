@@ -1,0 +1,89 @@
+@import './App.css';
+
+.navbar {
+  padding-top: 0.5px !important;
+}
+
+.nav-link{
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+.nav-link span {
+  transition: .5s;
+  font-size: 20px;
+  color: var(--brown);
+  display: unset !important;
+}
+
+.navbar-nav li {
+  display: inline-block !important;
+  position: relative;
+}
+.nav-link span:hover {
+  color: var(--blue);
+  transition: .5s
+}
+.navbar-nav a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--brown);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s;
+}
+
+.navbar-nav a:hover::before{
+  transform: scale(1);
+  transform-origin: left;
+}
+
+.navbar-nav a::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--brown);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s;
+}
+
+.navbar-nav a:hover::after{
+  transform: scale(1);
+  transform-origin: left;
+}
+
+/* --- Input --- */
+
+.search {
+  color: var(--brown);
+  border: 1px solid var(--blue) !important;
+}
+
+.search:hover {
+  color: var(--blueLight);
+  background-color: var(--brown);
+  border: 1px solid var(--brown) !important;
+}
+
+.form-control{
+  border: 1px solid rgb(25, 209, 255) !important;
+}
+
+.form-control:focus{
+  border-color: rgb(27, 209, 255) !important;
+  box-shadow: 0 0 0 0.1rem rgb(27, 209, 255, 0.5)!important;
+}
+
+::placeholder{
+  color: rgb(154, 51, 52) !important;
+}
