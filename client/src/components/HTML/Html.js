@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class Html extends Component {
   constructor() {
     super();
     this.state = {
       paragraph: '',
-      input: ''
+      input: '',
+      errors: {}
     }
 
     this.onClick = this.onClick.bind(this);
@@ -13,7 +16,7 @@ class Html extends Component {
   }
 
   onClick() {
-    this.setState(() => ({ paragraph: this.state.input }))
+    this.setState(() => ({ paragraph: this.state.input }));
   };
 
   onChange(e) {
@@ -35,9 +38,18 @@ class Html extends Component {
         <br />
         <br />
         <p>Value is: {this.state.paragraph}</p>
+        <p>{this.state.errors}</p>
       </div>
     )
   }
 }
 
-export default Html;
+Html.propTypes = {
+  errors: PropTypes.object.isRequired
+}
+
+const mapStateToProps = state => ({
+  errors: state.errors
+});
+
+export default connect(mapStateToProps, null)(Html);
