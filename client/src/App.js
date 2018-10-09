@@ -10,6 +10,9 @@ import Css from './components/CSS/Css';
 import Html from './components/HTML/Html';
 import JavaScript from './components/JS/JavaScript';
 
+//Redux
+import store from './store';
+import { Provider } from 'react-redux';
 
 //CSS
 import './style/App.css';
@@ -17,16 +20,18 @@ import './style/App.css';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div className='container-fluid'>
-          <Navbar />
-          <Route exact path='/' component={Landing} />
-          <Route exact path='/Css' component={Css}/>
-          <Route exact path='/Html' component={Html} />
-          <Route exact path='/JavaScript' component={JavaScript} />
-          <Footer />
-        </div>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <div className='container-fluid'>
+            <Navbar />
+            <Route exact path='/' component={Landing} />
+            <Route exact path='/Css' component={Css}/>
+            <Route exact path='/Html' component={Html} />
+            <Route exact path='/JavaScript' component={JavaScript} />
+            <Footer />
+          </div>
+        </Router>
+      // </Provider>
     );
   }
 }
