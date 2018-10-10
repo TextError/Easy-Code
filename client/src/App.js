@@ -7,8 +7,8 @@ import Landing from './components/layout/Landing';
 import Footer from './components/layout/Footer';
 //----------------------------------------------
 import Home from './components/home/Home'
-import Css from './components/css/Css';
 import Html from './components/html/Html';
+import Css from './components/css/Css';
 import JavaScript from './components/js/JavaScript';
 
 //Redux
