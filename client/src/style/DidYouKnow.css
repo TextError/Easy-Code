@@ -1,7 +1,9 @@
+@import './App.css';
+
 .did-you-know {
-  margin: 20px 0 20px 0;
+  margin: 20px 20px 20px 20px;
   padding: 20px;
-  border: 2px solid rgb(27, 209, 255);
+  border: 2px solid var(--blue);
   border-radius: 20px;
   text-align: justify;
   font-family: 'Times New Roman', Times, serif;
@@ -21,12 +23,12 @@
 }
 
 .did-you-know a {
-  color: rgb(154, 51, 52);
+  color: var(--brown);
   font-weight: 600;
 }
 
 .did-you-know a:hover{
-  color: rgb(27, 209, 255);
+  color: var(--blue);
   text-decoration: none;
 }
 
