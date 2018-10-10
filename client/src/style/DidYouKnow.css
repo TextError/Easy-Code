@@ -1,0 +1,63 @@
+.did-you-know {
+  margin: 20px 0 20px 0;
+  padding: 20px;
+  border: 2px solid rgb(27, 209, 255);
+  border-radius: 20px;
+  text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.did-you-know h1 {
+  font-size: 31px;
+}
+
+.did-you-know-box{
+  min-height: 120px;
+}
+
+.did-you-know-box {
+  display: flex;
+  align-items: center;
+}
+
+.did-you-know a {
+  color: rgb(154, 51, 52);
+  font-weight: 600;
+}
+
+.did-you-know a:hover{
+  color: rgb(27, 209, 255);
+  text-decoration: none;
+}
+
+@media (min-width: 200px) and (max-width: 320px) {
+  .did-you-know h1 {
+    font-size: 21px;
+    margin-bottom: 25px !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .did-you-know h1 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 576px) {
+  .did-you-know h1 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .did-you-know h1{
+    font-size: 27px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .did-you-know h1{
+    font-size: 29px;
+  }
+}
