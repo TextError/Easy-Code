@@ -17,6 +17,8 @@ import { Provider } from 'react-redux';
 //CSS
 import './style/App.css';
 
+import TestState from './react-redux/TestState';
+
 class App extends Component {
   render() {
     return (
@@ -28,6 +30,8 @@ class App extends Component {
             <Route exact path='/Css' component={Css}/>
             <Route exact path='/Html' component={Html} />
             <Route exact path='/JavaScript' component={JavaScript} />
+
+            <Route exact path='/test' component={TestState} />
             <Footer />
           </div>
         </Router>
