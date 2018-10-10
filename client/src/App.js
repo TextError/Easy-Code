@@ -6,9 +6,10 @@ import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Footer from './components/layout/Footer';
 //----------------------------------------------
-import Css from './components/CSS/Css';
-import Html from './components/HTML/Html';
-import JavaScript from './components/JS/JavaScript';
+import Home from './components/home/Home'
+import Css from './components/css/Css';
+import Html from './components/html/Html';
+import JavaScript from './components/js/JavaScript';
 
 //Redux
 import store from './store';
@@ -27,6 +28,7 @@ class App extends Component {
           <div className='container-fluid'>
             <Navbar />
             <Route exact path='/' component={Landing} />
+            <Route excat path='/home'  component={Home}/>
             <Route exact path='/Css' component={Css}/>
             <Route exact path='/Html' component={Html} />
             <Route exact path='/JavaScript' component={JavaScript} />
