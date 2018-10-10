@@ -20,7 +20,7 @@ class Navbar extends Component {
               <Link to='/home' className='nav-link'><span>Home</span></Link>
             </li>
             <li className="nav-item active mr-3">
-              <Link to='/about' className='nav-link'><span>About</span></Link>
+              <Link to='/html' className='nav-link'><span>Html</span></Link>
             </li>
             <li className="nav-item active mr-3">
               <Link to='/contact' className='nav-link'><span>Contact</span></Link>
