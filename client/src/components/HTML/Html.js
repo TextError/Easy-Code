@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+
+//Redux
+import { randomFacts } from '../../react-redux/actions/randomFactsActions';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
+//Css
 import DidYouKnow from './didYouKnow/DidYouKnow';
 
 class Html extends Component {
@@ -9,7 +16,7 @@ class Html extends Component {
   }
 
   onClick() {
-    
+    this.props.randomFacts;
   }
 
   render() {
@@ -23,4 +30,4 @@ class Html extends Component {
   }
 }
 
-export default Html;
+export default connect(null, { randomFacts })(Html);
