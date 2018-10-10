@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+//actions
+import { testAction } from '../../react-redux/actions/testActions';
+
 class Html extends Component {
   constructor() {
     super();
     this.state = {
-      paragraph: '',
-      input: '',
-      errors: {}
+      name: '',
+      password: ''
     }
 
     this.onClick = this.onClick.bind(this);
@@ -16,20 +18,33 @@ class Html extends Component {
   }
 
   onClick() {
-    this.setState(() => ({ paragraph: this.state.input }));
+    const user = {
+      name: this.state.name,
+      password: this.state.password
+    }
+    this.props.testAction(user);
   };
 
   onChange(e) {
-    this.setState({input: e.target.value})
+    this.setState({[e.target.name]: e.target.value})
   }
 
   render() {
+    const name = this.props.test.user.name
     return (
       <div>
-        <input 
+        <input
+          placeholder= 'Name' 
           type='text'
-          name='test'
-          value={this.state.input}
+          name='name'
+          value={this.state.name}
+          onChange={this.onChange}
+        />
+        <input 
+          placeholder= 'Password'
+          type='password'
+          name='password'
+          value={this.state.password}
           onChange={this.onChange}
         />
         <button
@@ -37,19 +52,18 @@ class Html extends Component {
         >Click me</button>
         <br />
         <br />
-        <p>Value is: {this.state.paragraph}</p>
-        <p>{this.state.errors}</p>
+        <p>Your name is: {name}</p>
       </div>
     )
   }
 }
 
 Html.propTypes = {
-  errors: PropTypes.object.isRequired
+  testAction: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
-  errors: state.errors
+  test: state.test
 });
 
-export default connect(mapStateToProps, null)(Html);
+export default connect(mapStateToProps, { testAction })(Html);
