@@ -16,7 +16,7 @@ class Html extends Component {
   }
 
   onClick() {
-    this.props.randomFacts;
+    this.props.randomFacts(randomNumber);
   }
 
   render() {
