@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 //Redux
 import { randomFacts } from '../../react-redux/actions/randomFactsActions';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 //Css
 import DidYouKnow from './didYouKnow/DidYouKnow';

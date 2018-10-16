@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { registerUser } from '../../react-redux/actions/registerAction';
 
 class Register extends Component {
   constructor() {
@@ -87,7 +89,8 @@ Register.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  errors: state.errors
+  errors: state.errors,
+  user: state.user
 });
 
 export default connect(mapStateToProps, { registerUser })(Register);
