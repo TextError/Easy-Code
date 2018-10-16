@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Footer from './components/layout/Footer';
+import Register from './components/layout/Register';
 //----------------------------------------------
 import Home from './components/home/Home'
 import Html from './components/html/Html';
@@ -28,6 +29,7 @@ class App extends Component {
           <div className='container-fluid'>
             <Navbar />
             <Route exact path='/' component={Landing} />
+            <Route exact path='/register' component={Register} />
             <Route excat path='/home'  component={Home}/>
             <Route exact path='/Css' component={Css}/>
             <Route exact path='/Html' component={Html} />

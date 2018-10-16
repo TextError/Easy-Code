@@ -25,6 +25,9 @@ class Navbar extends Component {
             <li className="nav-item active mr-3">
               <Link to='/contact' className='nav-link'><span>Contact</span></Link>
             </li>
+            <li className="nav-item active mr-3">
+              <Link to='/register' className='nav-link'><span>Register</span></Link>
+            </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
           <input 
