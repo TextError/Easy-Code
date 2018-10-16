@@ -8,15 +8,27 @@ class Register extends Component {
       userName: '',
       email: '',
       password: '',
-      password2: ''
+      password2: '',
+      errors: {}
     }
 
     this.onChange = this.onChange.bind(this);
-    this.onClick = this.onClick.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+
+    console.log('submit')
+  }
+
   render() {
+    const {errors} = this.state;
+
     return (
       <div>
         <form onSubmit={this.onSubmit}>
@@ -26,6 +38,7 @@ class Register extends Component {
             value={this.state.userName}
             placeholder='Name'
             onChange={this.onChange}
+            error={errors.name}
           />
           <input 
             type='email'
@@ -33,6 +46,7 @@ class Register extends Component {
             value={this.state.email}
             placeholder='Email'
             onChange={this.onChange}
+            error={errors.email}
           />
           <input 
             type='password'
@@ -40,6 +54,7 @@ class Register extends Component {
             value={this.state.password}
             placeholder='Password'
             onChange={this.onChange}
+            error={errors.password}
           />
           <input 
             type='password'
@@ -47,8 +62,11 @@ class Register extends Component {
             value={this.state.password2}
             placeholder='Confirm password'
             onChange={this.onChange}
+            error={errors.password2}
           />
-          <button onClick={this.onClick}>Register</button>
+          <button 
+            type='submit'
+          >Register</button>
         </form>
       </div>
     )
