@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Register extends Component {
   constructor() {
@@ -23,7 +24,14 @@ class Register extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    console.log('submit')
+    const newUser = {
+      name: this.state.userName,
+      email: this.state.email,
+      password: this.state.password,
+      password2: this.state.password2
+    }
+
+    this.props.registerUser(newUser);
   }
 
   render() {
@@ -73,4 +81,13 @@ class Register extends Component {
   }
 }
 
-export default Register;
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequire,
+  errors: PropTypes.object.isRequire
+};
+
+const mapStateToProps = state => ({
+  errors: state.errors
+});
+
+export default connect(mapStateToProps, { registerUser })(Register);
