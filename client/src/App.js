@@ -6,6 +6,7 @@ import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Footer from './components/layout/Footer';
 import Register from './components/layout/Register';
+import Post from './components/layout/Post';
 //----------------------------------------------
 import Home from './components/home/Home'
 import Html from './components/html/Html';
@@ -35,6 +36,7 @@ class App extends Component {
             <Route exact path='/Html' component={Html} />
             <Route exact path='/JavaScript' component={JavaScript} />
 
+            <Route exact path='/post' component={Post} />
             <Route exact path='/test' component={TestState} />
             <Footer />
           </div>

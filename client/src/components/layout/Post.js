@@ -5,25 +5,39 @@ class Post extends Component {
     super();
     this.state = {
       text: '',
-      error: ''
+      errors: ''
     }
 
     this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onChange() {
+  onChange(e) {
+    this.setState({ text: e.target.value });
+  }
 
+  onSubmit(e) {
+    e.preventDefault();
+
+    console.log(this.state.text);
+    this.setState({ text: ''});
   }
 
   render() {
+    const { errors } = this.state;
+
     return (
       <div>
-        <input 
-          type='text'
-          name='post'
-          value={this.state.text}
-          onChange={this.onChange}
-        />
+        <form onSubmit={this.onSubmit}>
+          <textarea
+            type='text'
+            name='text'
+            value={this.state.text}
+            onChange={this.onChange}
+            error={errors.text}
+          />
+          <button type='submit'>Submit</button>
+        </form>
       </div>
     )
   }
