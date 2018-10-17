@@ -21,6 +21,15 @@ router.post('/', (req, res) => {
   });
 
   newPost.save().then(post => res.json(post));
-})
+});
+
+// @route   GET api/posts
+// @desc    Get posts
+// @access  Public
+router.get('/', (req, res) => {
+  Post.find()
+    .then(posts => res.json(posts))
+    .catch(err => res.status(400).json({ no_post_found: 'No posts found!' }))
+});
 
 module.exports = router;
