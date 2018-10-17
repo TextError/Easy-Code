@@ -1,4 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+//Redux
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { addPost } from '../../react-redux/actions/addPost';
 
 class Post extends Component {
   constructor() {
@@ -19,7 +24,11 @@ class Post extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    console.log(this.state.text);
+    const newPost = {
+      text: this.state.text
+    }
+
+    this.props.addPost(newPost)
     this.setState({ text: ''});
   }
 
@@ -43,4 +52,13 @@ class Post extends Component {
   }
 }
 
-export default Post;
+Post.propTypes = {
+  addPost: PropTypes.func.isRequired,
+  errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  errors: state.errors
+});
+
+export default connect(mapStateToProps, { addPost })(Post);
