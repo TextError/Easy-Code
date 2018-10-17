@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 //Redux
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addPost } from '../../react-redux/actions/addPost';
+import { addPost } from '../../react-redux/actions/addPostAction';
 
 class Post extends Component {
   constructor() {
     super();
     this.state = {
       text: '',
-      errors: ''
+      errors: {}
     }
 
     this.onChange = this.onChange.bind(this);
