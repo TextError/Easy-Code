@@ -6,6 +6,7 @@ const passport = require('passport');
 
 const app = express();
 const users = require('./routes/api/user');
+const posts = require('./routes/api/post');
 
 //Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -20,7 +21,8 @@ mongoose.connect(db, { useNewUrlParser: true })
   .catch(err => console.log(err));
 
 //Routes
-app.use('/api/users', users)
+app.use('/api/users', users);
+app.use('/api/posts', posts);
 
 const port = process.env.Port || 5000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
